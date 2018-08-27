@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Investor:</strong>
+  <%= @report.investor_id %>
+  <%= image_tag @report.pdf.url(:thumb) %>
+  <%= link_to "View", @report.pdf.url %>  
+  <%= link_to "Download(xls)", @report.pdf.url(:xls) %>
+
+</p>
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>
